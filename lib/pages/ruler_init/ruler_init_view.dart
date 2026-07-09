@@ -11,7 +11,7 @@ class RulerInitView extends GetView<RulerInitLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.zlykfq.value
+          () => controller.dvgj.value
               ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class RulerInitView extends GetView<RulerInitLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.wgru();
+              controller.sfnomr();
             },
             icon: const Icon(
               Icons.restart_alt,

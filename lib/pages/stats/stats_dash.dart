@@ -25,7 +25,7 @@ class StatsDash extends GetView<RulerInitLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.scqdn.value)),
+              url: WebUri.uri(Uri.parse(controller.nhpaizt.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
