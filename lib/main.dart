@@ -33,8 +33,11 @@ import 'package:mobilem/pages/ruler/ruler_binding.dart';
 import 'package:mobilem/pages/ruler/ruler_view.dart';
 import 'package:mobilem/pages/divider_ruler/divider_ruler_binding.dart';
 import 'package:mobilem/pages/divider_ruler/divider_ruler_view.dart';
+import 'package:mobilem/pages/ruler_init/ruler_init_binding.dart';
+import 'package:mobilem/pages/ruler_init/ruler_init_view.dart';
 import 'package:mobilem/pages/scale_ruler/scale_ruler_binding.dart';
 import 'package:mobilem/pages/scale_ruler/scale_ruler_view.dart';
+import 'package:mobilem/pages/stats/stats_dash.dart';
 import 'package:mobilem/pages/tape_ruler/tape_ruler_binding.dart';
 import 'package:mobilem/pages/tape_ruler/tape_ruler_view.dart';
 import 'package:mobilem/pages/unit_converter/unit_converter_binding.dart';
@@ -71,7 +74,7 @@ class MobilemApp extends StatelessWidget {
           title: Lang.appName,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light(),
-          initialRoute: '/main',
+          initialRoute: '/',
           getPages: Ruler,
         );
       },
@@ -79,6 +82,7 @@ class MobilemApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Ruler = [
+  GetPage(name: '/', page: () => const RulerInitView(), binding: RulerInitBinding()),
   GetPage(name: '/main', page: () => const AppRootView(), binding: AppRootBinding()),
   GetPage(name: '/ruler', page: () => const RulerView(), binding: RulerBinding()),
   GetPage(name: '/calibration', page: () => const CalibrationView(), binding: CalibrationBinding()),
@@ -95,6 +99,7 @@ List<GetPage<dynamic>> Ruler = [
   GetPage(name: '/divider_ruler', page: () => const DividerRulerView(), binding: DividerRulerBinding()),
   GetPage(name: '/record_detail', page: () => const RecordDetailView(), binding: RecordDetailBinding()),
   GetPage(name: '/stats', page: () => const StatsView(), binding: StatsBinding()),
+  GetPage(name: '/stats_dash', page: () => const StatsDash()),
   GetPage(
     name: '/calibration_settings',
     page: () => const CalibrationSettingsView(),
